@@ -8,8 +8,8 @@ Table Users {
 Table Projects {
   id int [pk]
   name varchar
-  userId int [ref: > Users.id]
   sessionDate datetime
+  userId int [ref: > Users.id]
   statusId varchar [ref: > Status.id]
 }
 
@@ -21,6 +21,11 @@ Table Photos {
 Table Status {
   id int [pk]
   status varchar
+}
+
+Table Tags {
+  id int [pk]
+  tag varchar
 }
 
 Table ProjectPhoto {
@@ -35,10 +40,10 @@ Table UserProject {
   projectId int [ref: > Projects.id]
 }
 
+Table PhotoTag {
+  id int
+  photoId int [ref: > Photos.id]
+  tagId int [ref: > Tags.id]
+}
 
 // Table UserPhoto {} ?
-
-// Table Tags {
-//   id int [pk]
-//   tag varchar
-// }
