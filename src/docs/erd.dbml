@@ -1,0 +1,44 @@
+Table Users {
+  id int [pk]
+  name varchar
+  email varchar
+  isAdmin boolean
+}
+
+Table Projects {
+  id int [pk]
+  name varchar
+  userId int [ref: > Users.id]
+  sessionDate datetime
+  statusId varchar [ref: > Status.id]
+}
+
+Table Photos {
+  id int [pk]
+  projectId int [ref: > Projects.id]
+}
+
+Table Status {
+  id int [pk]
+  status varchar
+}
+
+Table ProjectPhoto {
+  id int [pk]
+  projectId int [ref: > Projects.id]
+  photoId int [ref: > Photos.id]
+}
+
+Table UserProject {
+  id int [pk]
+  userId int [ref: > Users.id]
+  projectId int [ref: > Projects.id]
+}
+
+
+// Table UserPhoto {} ?
+
+// Table Tags {
+//   id int [pk]
+//   tag varchar
+// }
