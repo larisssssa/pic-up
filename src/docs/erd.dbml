@@ -23,27 +23,8 @@ Table Status {
   status varchar
 }
 
-Table Tags {
-  id int [pk]
-  tag varchar
-}
-
 Table ProjectPhoto {
   id int [pk]
   projectId int [ref: > Projects.id]
   photoId int [ref: > Photos.id]
 }
-
-Table UserProject {
-  id int [pk]
-  userId int [ref: > Users.id]
-  projectId int [ref: > Projects.id]
-}
-
-Table PhotoTag {
-  id int
-  photoId int [ref: > Photos.id]
-  tagId int [ref: > Tags.id]
-}
-
-// Table UserPhoto {} ?
