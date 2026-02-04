@@ -66,3 +66,19 @@ PicUp is an application for project management app for photographers. PicUp offe
     - projectId
     - photoId
 
+---
+## Issues
+Project setup
+- create components
+- create database
+
+Starter Pages
+- create welcome page
+- create home dashboard
+- navigation
+
+View Project List
+View Project Details
+Create New Project
+Update Project
+Delete Project
