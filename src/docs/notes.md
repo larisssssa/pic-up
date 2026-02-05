@@ -51,7 +51,7 @@ PicUp is an application for project management app for photographers. PicUp offe
   - projects
     - id
     - name
-    - data
+    - date
     - userId
     - statusId
   - photos
