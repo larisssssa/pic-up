@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Outlet, Route, Routes } from "react-router-dom";
-import { Welcome } from "../components/welcome/Welcome";
 import { NavBar } from "../components/nav/NavBar";
+import { Dashboard } from "../components/dashboard/Dashboard";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -24,7 +24,7 @@ export const ApplicationViews = () => {
             </>
           }
         >
-          <Route index element={<Welcome/>}/>
+          <Route index element={<Dashboard/>}/>
         </Route>
       </Routes>
     </>
