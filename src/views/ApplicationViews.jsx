@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Outlet, Route, Routes } from "react-router-dom";
 import { NavBar } from "../components/nav/NavBar";
 import { Dashboard } from "../components/dashboard/Dashboard";
+import { ProjectList } from "../components/projects/ProjectList";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -24,7 +25,10 @@ export const ApplicationViews = () => {
             </>
           }
         >
-          <Route index element={<Dashboard/>}/>
+          <Route index element={<Dashboard />} />
+          <Route path="projects">
+            <Route index element={<ProjectList />} />
+          </Route>
         </Route>
       </Routes>
     </>
