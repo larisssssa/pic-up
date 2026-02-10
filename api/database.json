@@ -121,166 +121,166 @@
       "isAdmin": false
     }
   ],
-  "status": [
-    { "id": 1, "status": "scheduled" },
-    { "id": 2, "status": "in progress" },
-    { "id": 3, "status": "completed" },
-    { "id": 4, "status": "canceled" }
+  "phases": [
+    { "id": 1, "name": "scheduled" },
+    { "id": 2, "name": "in progress" },
+    { "id": 3, "name": "completed" },
+    { "id": 4, "name": "canceled" }
   ],
   "projects": [
     {
       "id": 1,
       "name": "Yuille Wedding",
-      "date": "1766641113000",
+      "date": "2026-01-27",
       "userId": 7,
-      "statusId": 1
+      "phaseId": 1
     },
     {
       "id": 2,
       "name": "Epine Baby Shower",
-      "date": "1753292833000",
+      "date": "2025-03-08",
       "userId": 3,
-      "statusId": 2
+      "phaseId": 2
     },
     {
       "id": 3,
       "name": "Epine Family",
-      "date": "1744672475000",
+      "date": "2025-11-22",
       "userId": 3,
-      "statusId": 3
+      "phaseId": 3
     },
     {
       "id": 4,
       "name": "Gamblin Party",
-      "date": "1759313145000",
+      "date": "2026-01-23",
       "userId": 4,
-      "statusId": 4
+      "phaseId": 4
     },
     {
       "id": 5,
       "name": "Aldcorn Event",
-      "date": "1746623431000",
+      "date": "2025-10-29",
       "userId": 5,
-      "statusId": 1
+      "phaseId": 1
     },
     {
       "id": 6,
       "name": "Fattorini Engagement",
-      "date": "1741853907000",
+      "date": "2025-08-05",
       "userId": 6,
-      "statusId": 3
+      "phaseId": 3
     },
     {
       "id": 7,
       "name": "Yuille Engagement",
-      "date": "1740835881000",
+      "date": "2025-11-06",
       "userId": 7,
-      "statusId": 3
+      "phaseId": 3
     },
     {
       "id": 8,
       "name": "Meadowcroft Party",
-      "date": "1780706016000",
+      "date": "2025-10-31",
       "userId": 8,
-      "statusId": 4
+      "phaseId": 4
     },
     {
       "id": 9,
       "name": "Chamley Senior Portraits",
-      "date": "1770759322000",
+      "date": "2025-02-22",
       "userId": 9,
-      "statusId": 1
+      "phaseId": 1
     },
     {
       "id": 10,
       "name": "Devo Baptism",
-      "date": "1783957248000",
+      "date": "2025-06-12",
       "userId": 10,
-      "statusId": 2
+      "phaseId": 2
     },
     {
       "id": 11,
       "name": "Forlong Wedding",
-      "date": "1760593340000",
+      "date": "2026-01-30",
       "userId": 11,
-      "statusId": 3
+      "phaseId": 3
     },
     {
       "id": 12,
       "name": "Wellsman Party",
-      "date": "1741799955000",
+      "date": "2026-02-05",
       "userId": 12,
-      "statusId": 4
+      "phaseId": 4
     },
     {
       "id": 13,
       "name": "Plaschke Picnic",
-      "date": "1735749849000",
+      "date": "2025-03-11",
       "userId": 13,
-      "statusId": 1
+      "phaseId": 1
     },
     {
       "id": 14,
       "name": "Swetland Event",
-      "date": "1762630733000",
+      "date": "2025-03-30",
       "userId": 14,
-      "statusId": 2
+      "phaseId": 2
     },
     {
       "id": 15,
       "name": "Peniman Party",
-      "date": "1730603013000",
+      "date": "2025-09-07",
       "userId": 15,
-      "statusId": 3
+      "phaseId": 3
     },
     {
       "id": 16,
       "name": "McGebenay Wedding",
-      "date": "1767875153000",
+      "date": "2025-04-05",
       "userId": 16,
-      "statusId": 1
+      "phaseId": 1
     },
     {
       "id": 17,
       "name": "Walaron Wedding",
-      "date": "1736308760000",
+      "date": "2025-09-02",
       "userId": 17,
-      "statusId": 2
+      "phaseId": 2
     },
     {
       "id": 18,
       "name": "Gamblin Cookout",
-      "date": "1748056476000",
+      "date": "2025-06-04",
       "userId": 4,
-      "statusId": 3
+      "phaseId": 3
     },
     {
       "id": 19,
       "name": "Twohig Family",
-      "date": "1731041096000",
+      "date": "2025-02-21",
       "userId": 19,
-      "statusId": 3
+      "phaseId": 3
     },
     {
       "id": 20,
       "name": "Exeter Engagement",
-      "date": "1762002527000",
+      "date": "2025-09-17",
       "userId": 20,
-      "statusId": 3
+      "phaseId": 3
     },
     {
       "id": 21,
       "name": "Meadowcroft Family",
-      "date": "1769262555000",
+      "date": "2026-01-18",
       "userId": 8,
-      "statusId": 3
+      "phaseId": 3
     },
     {
       "id": 22,
       "name": "Fattorini Divorce",
-      "date": "1742240049000",
+      "date": "2025-06-04",
       "userId": 6,
-      "statusId": 2
+      "phaseId": 2
     }
   ],
   "photos": [
