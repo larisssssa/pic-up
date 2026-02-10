@@ -5,15 +5,8 @@ export const Dashboard = () => {
   const [dashSessions, setDashSessions] = useState([]);
 
   useEffect(() => {
-    getInProgressProjects().then((array) => (setDashSessions(array)))
+    getInProgressProjects().then((array) => setDashSessions(array));
   }, []);
-
-  const handleDate = (session) => {
-    const dateObj = new Date(session.date * 1)
-    const utcString = dateObj.toUTCString()
-    return <>{utcString}</>
-
-  }
 
   return (
     <>
@@ -23,8 +16,7 @@ export const Dashboard = () => {
           {dashSessions.map((session) => (
             <section key={session.id}>
               <header>{session.name}</header>
-              <div>{handleDate(session)}</div>
-              
+              <div>{session.date}</div>
             </section>
           ))}
         </div>
