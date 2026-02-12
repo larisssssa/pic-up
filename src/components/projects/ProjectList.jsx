@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getProjects } from "../../services/projectService";
+import { Link } from "react-router-dom";
 
 export const ProjectList = () => {
   const [allProjects, setAllProjects] = useState([]);
@@ -18,6 +19,7 @@ export const ProjectList = () => {
               <div>Client Name: {project.user?.name}</div>
               <div>Session Date: {project.date}</div>
               <div>Status: {project.phase?.name}</div>
+              <div><button><Link to="/{project.id}">Project Details</Link></button></div>
             </section>
           )
         })}
