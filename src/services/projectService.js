@@ -1,5 +1,5 @@
 export const getProjects = () => {
-  return fetch(`http://localhost:8088/projects`).then((res) => res.json());
+  return fetch(`http://localhost:8088/projects?_expand=user&_expand=phase`).then((res) => res.json());
 };
 
 export const getInProgressProjects = () => {
