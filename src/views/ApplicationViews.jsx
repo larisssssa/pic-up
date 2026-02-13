@@ -29,7 +29,7 @@ export const ApplicationViews = () => {
           <Route index element={<Dashboard />} />
           <Route path="projects">
             <Route index element={<ProjectList />} />
-            <Route path=":id" element={<Project/>}/>
+            <Route path=":projectId" element={<Project/>}/>
           </Route>
         </Route>
       </Routes>

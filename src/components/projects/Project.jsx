@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 export const Project = () => {
+  const { projectId } = useParams();
+
   return (
     <>
       <section>
-        <div>Project #</div>
+        <div>Project # {projectId}</div>
         <div>Client:</div>
         <div>Status:</div>
         <div>Session Date:</div>
