@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getProjectById } from "../../services/projectService";
+import {
+  getPhotosByProjectId,
+  getProjectById,
+} from "../../services/projectService";
 
 export const Project = () => {
   const { projectId } = useParams();
 
   const [projectArray, setProjectArray] = useState([]);
   const [project, setProject] = useState({});
+  const [projectPhotos, setProjectPhotos] = useState([]);
 
   useEffect(() => {
     getProjectById(projectId).then((p) => {
@@ -20,6 +24,12 @@ export const Project = () => {
     }
   }, [projectArray]);
 
+  useEffect(() => {
+    getPhotosByProjectId(projectId).then((p) => {
+      setProjectPhotos(p);
+    });
+  }, [projectArray]);
+
   return (
     <>
       <section>
@@ -29,7 +39,12 @@ export const Project = () => {
         <div>Session Date: {project.date}</div>
       </section>
       <section>
-        <div>image</div>
+        {projectPhotos.map((p) => (
+          <figure key={p.id}>
+            <img src={p.photo?.link} />
+            <figcaption>{p.photo?.fileName}</figcaption>
+          </figure>
+        ))}
       </section>
       <section>
         <button>Save Changes</button>
