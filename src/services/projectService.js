@@ -21,3 +21,7 @@ export const getPhotosByProjectId = (id) => {
     `http://localhost:8088/projectPhoto?projectId=${id}&_expand=photo`,
   ).then((res) => res.json());
 };
+
+export const getPhases = () => {
+  return fetch(`http://localhost:8088/phases`).then((res) => res.json());
+};
