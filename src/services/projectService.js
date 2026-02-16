@@ -25,3 +25,13 @@ export const getPhotosByProjectId = (id) => {
 export const getPhases = () => {
   return fetch(`http://localhost:8088/phases`).then((res) => res.json());
 };
+
+export const saveProjectUpdates = (projectObj) => {
+  return fetch(`http://localhost:8088/projects/${projectObj.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(projectObj),
+  });
+};

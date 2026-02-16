@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {
   getPhases,
   getPhotosByProjectId,
@@ -43,18 +43,7 @@ export const Project = () => {
       <section>
         <div>Project # {projectId}</div>
         <div>Client: {project.user?.name}</div>
-        <fieldset>
-          <div>
-            <label>Status: </label>
-            <select selected={project.phase?.name}>
-              {statusList.map((p) => (
-                <option key={p.id} value={p.name} selected={project.phaseId == p.id ? true : false}>
-                  {p.name}
-                </option>
-              ))}
-            </select>
-          </div>
-        </fieldset>
+        <div>Status: {project.phase?.name}</div>
         <div>Session Date: {project.date}</div>
       </section>
       <section>
@@ -66,7 +55,11 @@ export const Project = () => {
         ))}
       </section>
       <section>
-        <button>Save Changes</button>
+        <button>
+          <Link to={`/projects/${projectId}/edit`} key={project.id}>
+            Update Project
+          </Link>
+        </button>
         <button>Delete Project</button>
       </section>
     </>
