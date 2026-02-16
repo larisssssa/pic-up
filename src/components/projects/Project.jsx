@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {
   getPhases,
   getPhotosByProjectId,
@@ -55,7 +55,11 @@ export const Project = () => {
         ))}
       </section>
       <section>
-        <button>Save Changes</button>
+        <button>
+          <Link to={`/projects/${projectId}/edit`} key={project.id}>
+            Update Project
+          </Link>
+        </button>
         <button>Delete Project</button>
       </section>
     </>
