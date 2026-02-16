@@ -20,6 +20,7 @@ export const ProjectList = () => {
         {allProjects.map((project) => {
           return (
             <section key={project.id}>
+              <div>---</div>
               <header>Project: {project.id}</header>
               <div>Client Name: {project.user?.name}</div>
               <div>Session Date: {project.date}</div>
