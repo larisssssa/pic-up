@@ -23,7 +23,16 @@ export const ProjectNew = () => {
         <h2>New Project</h2>
         <fieldset>
           <div>Project Name: </div>
-          <input type="text" id="name" />
+          <input
+            type="text"
+            id="name"
+            value={userChoices.name}
+            onChange={(e) => {
+              const copy = { ...userChoices };
+              copy.name = e.target.value;
+              setUserChoices(copy);
+            }}
+          />
         </fieldset>
         <fieldset>
           <div>Client Name:</div>
