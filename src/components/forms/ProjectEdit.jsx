@@ -3,24 +3,21 @@ import { useParams } from "react-router-dom";
 import { getProjectById, getPhases } from "../../services/projectService";
 
 export const ProjectEdit = () => {
-  const { id } = useParams();
-  const [userChoices, setUserChoices] = useState({
-    id: 0,
-    name: "",
-    date: "",
-    userId: 0,
-    phaseId: 0,
-  });
+  const { projectId } = useParams();
+  const [project, setProject] = useState({});
+  const [userChoices, setUserChoices] = useState({});
   const [phases, setPhases] = useState([]);
 
   useEffect(() => {
-    getProjectById(id).then((p) => {
+    getProjectById(projectId).then((p) => {
+      const obj = p[0];
+      setProject(obj);
       setUserChoices({
-        id: p.id,
-        name: p.name,
-        date: p.date,
-        userId: p.userId,
-        phaseId: p.phaseId,
+        id: obj.id,
+        name: obj.name,
+        date: obj.date,
+        userId: obj.userId,
+        phaseId: obj.phaseId,
       });
     });
   }, []);
@@ -34,7 +31,8 @@ export const ProjectEdit = () => {
   return (
     <>
       <form>
-        <h2>Update Project</h2> <fieldset>Client Name:</fieldset>
+        <h2>Update Project</h2>
+        <fieldset>Client Name: {project.user?.name}</fieldset>
         <fieldset>
           Status:
           <select
@@ -42,7 +40,7 @@ export const ProjectEdit = () => {
             onChange={(e) => {
               const copy = { ...userChoices };
               copy.phaseId = parseInt(e.target.value);
-              copy;
+              setUserChoices(copy);
             }}
           >
             {phases.map((p) => (
@@ -52,7 +50,8 @@ export const ProjectEdit = () => {
             ))}
           </select>
         </fieldset>
-        <fieldset>Date:</fieldset>
+        <fieldset>Date: {project.date}</fieldset>
+        <button>Save</button>
       </form>
     </>
   );
