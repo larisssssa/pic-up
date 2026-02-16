@@ -5,6 +5,7 @@ import { Dashboard } from "../components/dashboard/Dashboard";
 import { ProjectList } from "../components/projects/ProjectList";
 import { Project } from "../components/projects/Project";
 import { ProjectEdit } from "../components/forms/ProjectEdit";
+import { ProjectNew } from "../components/forms/ProjectNew";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -32,6 +33,7 @@ export const ApplicationViews = () => {
             <Route index element={<ProjectList />} />
             <Route path=":projectId" element={<Project />} />
             <Route path=":projectId/edit" element={<ProjectEdit />} />
+            <Route path="new" element={<ProjectNew/>}/>
           </Route>
         </Route>
       </Routes>
