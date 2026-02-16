@@ -122,10 +122,22 @@
     }
   ],
   "phases": [
-    { "id": 1, "name": "scheduled" },
-    { "id": 2, "name": "in progress" },
-    { "id": 3, "name": "completed" },
-    { "id": 4, "name": "canceled" }
+    {
+      "id": 1,
+      "name": "scheduled"
+    },
+    {
+      "id": 2,
+      "name": "in progress"
+    },
+    {
+      "id": 3,
+      "name": "completed"
+    },
+    {
+      "id": 4,
+      "name": "canceled"
+    }
   ],
   "projects": [
     {
