@@ -12,7 +12,11 @@ export const ProjectList = () => {
   return (
     <>
       <div>
-        <div><button><Link to={``}>New Project</Link></button></div>
+        <div>
+          <button>
+            <Link to={``}>New Project</Link>
+          </button>
+        </div>
         {allProjects.map((project) => {
           return (
             <section key={project.id}>
@@ -22,7 +26,9 @@ export const ProjectList = () => {
               <div>Status: {project.phase?.name}</div>
               <div>
                 <button>
-                  <Link to={`/projects/${project.id}`} key={project.id}>Project Details</Link>
+                  <Link to={`/projects/${project.id}`} key={project.id}>
+                    Project Details
+                  </Link>
                 </button>
               </div>
             </section>
