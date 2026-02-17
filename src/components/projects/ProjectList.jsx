@@ -14,7 +14,7 @@ export const ProjectList = () => {
       <div>
         <div>
           <button>
-            <Link to={``}>New Project</Link>
+            <Link to={`/projects/new`}>New Project</Link>
           </button>
         </div>
         {allProjects.map((project) => {
