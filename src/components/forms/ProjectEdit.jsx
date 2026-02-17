@@ -6,7 +6,7 @@ import {
   saveProjectUpdates,
 } from "../../services/projectService";
 
-export const ProjectEdit = () => {
+export const ProjectEdit = ({ currentUser }) => {
   const navigate = useNavigate();
   const { projectId } = useParams();
 
@@ -17,6 +17,7 @@ export const ProjectEdit = () => {
     date: "",
     userId: 0,
     phaseId: 0,
+    adminId: 0,
   });
   const [phases, setPhases] = useState([]);
 
@@ -30,6 +31,7 @@ export const ProjectEdit = () => {
         date: obj.date,
         userId: obj.userId,
         phaseId: obj.phaseId,
+        adminId: obj.adminId,
       });
     });
   }, []);

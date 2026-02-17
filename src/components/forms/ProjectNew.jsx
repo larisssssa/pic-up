@@ -3,7 +3,7 @@ import { getUsers } from "../../services/userService";
 import { useNavigate } from "react-router-dom";
 import { createNewProject } from "../../services/projectService";
 
-export const ProjectNew = () => {
+export const ProjectNew = ({ currentUser }) => {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [userChoices, setUserChoices] = useState({
@@ -12,6 +12,7 @@ export const ProjectNew = () => {
     date: "",
     userId: 0,
     phaseId: 0,
+    adminId: 0,
   });
 
   useEffect(() => {
@@ -24,6 +25,7 @@ export const ProjectNew = () => {
     e.preventDefault();
     const newProject = { ...userChoices };
     newProject.phaseId = 1;
+    newProject.adminId = currentUser.id;
 
     if (newProject.name && newProject.date && newProject.userId > 0) {
       createNewProject(newProject).then(navigate(-1));
