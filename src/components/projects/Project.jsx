@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import {
-  getPhases,
+  deleteProject,
   getPhotosByProjectId,
   getProjectById,
 } from "../../services/projectService";
 
 export const Project = () => {
   const { projectId } = useParams();
+  const navigate = useNavigate();
 
   const [projectArray, setProjectArray] = useState([]);
   const [project, setProject] = useState({});
   const [projectPhotos, setProjectPhotos] = useState([]);
-  const [statusList, setStatusList] = useState([]);
 
   useEffect(() => {
     getProjectById(projectId).then((p) => {
@@ -32,11 +32,13 @@ export const Project = () => {
     });
   }, [projectArray]);
 
-  useEffect(() => {
-    getPhases().then((p) => {
-      setStatusList(p);
-    });
-  }, []);
+  const handleDelete = () => {
+    if (window.confirm("Are you sure you would like to delete this project?")) {
+      deleteProject(projectId).then(navigate(-1));
+    } else {
+      console.log("no");
+    }
+  };
 
   return (
     <>
@@ -60,7 +62,7 @@ export const Project = () => {
             Update Project
           </Link>
         </button>
-        <button>Delete Project</button>
+        <button onClick={handleDelete}>Delete Project</button>
       </section>
     </>
   );
