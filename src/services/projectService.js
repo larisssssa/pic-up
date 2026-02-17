@@ -1,6 +1,6 @@
-export const getProjects = () => {
+export const getProjectsByAdminId = (adminId) => {
   return fetch(
-    `http://localhost:8088/projects?_expand=user&_expand=phase`,
+    `http://localhost:8088/projects?adminId=${adminId}&_expand=user&_expand=phase`,
   ).then((res) => res.json());
 };
 

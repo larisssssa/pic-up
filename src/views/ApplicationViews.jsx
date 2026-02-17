@@ -28,12 +28,18 @@ export const ApplicationViews = () => {
             </>
           }
         >
-          <Route index element={<Dashboard />} />
+          <Route index element={<Dashboard currentUser={currentUser} />} />
           <Route path="projects">
-            <Route index element={<ProjectList />} />
-            <Route path=":projectId" element={<Project />} />
+            <Route index element={<ProjectList currentUser={currentUser} />} />
+            <Route
+              path=":projectId"
+              element={<Project currentUser={currentUser} />}
+            />
             <Route path=":projectId/edit" element={<ProjectEdit />} />
-            <Route path="new" element={<ProjectNew />} />
+            <Route
+              path="new"
+              element={<ProjectNew currentUser={currentUser} />}
+            />
           </Route>
         </Route>
       </Routes>

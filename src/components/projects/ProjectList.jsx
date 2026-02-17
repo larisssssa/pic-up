@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { getProjects } from "../../services/projectService";
+import { getProjectsByAdminId } from "../../services/projectService";
 import { Link } from "react-router-dom";
 
-export const ProjectList = () => {
+export const ProjectList = ({currentUser}) => {
   const [allProjects, setAllProjects] = useState([]);
 
   useEffect(() => {
-    getProjects().then((data) => setAllProjects(data));
+    getProjectsByAdminId(currentUser.id).then((data) => setAllProjects(data));
   }, []);
 
   return (
