@@ -35,3 +35,15 @@ export const saveProjectUpdates = (projectObj) => {
     body: JSON.stringify(projectObj),
   });
 };
+
+export const createNewProject = (project) => {
+  return fetch(`http://localhost:8088/projects`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(project),
+  }).then((res) => {
+    res.json();
+  });
+};

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getUsers } from "../../services/userService";
 import { useNavigate } from "react-router-dom";
+import { createNewProject } from "../../services/projectService";
 
 export const ProjectNew = () => {
   const navigate = useNavigate();
