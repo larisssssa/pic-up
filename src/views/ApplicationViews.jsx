@@ -30,7 +30,7 @@ export const ApplicationViews = () => {
         >
           <Route index element={<Dashboard currentUser={currentUser} />} />
           <Route path="projects">
-            <Route index element={<ProjectList currentUser={currentUser} />} />
+            <Route index element={<ProjectList />} />
             <Route
               path=":projectId"
               element={<Project currentUser={currentUser} />}
