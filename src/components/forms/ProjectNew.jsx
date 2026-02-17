@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { getUsers } from "../../services/userService";
+import { useNavigate } from "react-router-dom";
 
 export const ProjectNew = () => {
+  const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [userChoices, setUserChoices] = useState({
     id: 0,
@@ -16,6 +18,16 @@ export const ProjectNew = () => {
       setUsers(users);
     });
   }, []);
+
+  const handleSave = (e) => {
+    e.preventDefault();
+    const newProject = { ...userChoices };
+    newProject.phaseId = 1;
+
+    if (newProject.name && newProject.date && newProject.userId > 0) {
+      createNewProject(newProject).then(navigate(-1));
+    }
+  };
 
   return (
     <>
@@ -64,7 +76,7 @@ export const ProjectNew = () => {
             }}
           />
         </fieldset>
-        <button>Save</button>
+        <button onClick={(e) => handleSave(e)}>Save</button>
       </form>
     </>
   );
