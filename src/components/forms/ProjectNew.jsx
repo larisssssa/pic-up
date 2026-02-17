@@ -27,6 +27,8 @@ export const ProjectNew = () => {
 
     if (newProject.name && newProject.date && newProject.userId > 0) {
       createNewProject(newProject).then(navigate(-1));
+    } else {
+      alert("Please complete all fields");
     }
   };
 
