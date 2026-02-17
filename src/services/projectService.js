@@ -47,3 +47,7 @@ export const createNewProject = (project) => {
     res.json();
   });
 };
+
+export const deleteProject = (id) => {
+  return fetch(`http://localhost:8088/projects/${id}`, { method: "DELETE" });
+};
