@@ -14,12 +14,16 @@ export const Login = () => {
     return getUserByEmail(email).then((foundUsers) => {
       if (foundUsers.length === 1) {
         const user = foundUsers[0];
-        localStorage.setItem(
-          "picup_user",
-          JSON.stringify({
-            id: user.id,
-          }),
-        );
+        if (user.isAdmin) {
+          localStorage.setItem(
+            "picup_user",
+            JSON.stringify({
+              id: user.id,
+            }),
+          );
+        } else {
+          window.alert("Invalid login");
+        }
 
         navigate("/");
       } else {

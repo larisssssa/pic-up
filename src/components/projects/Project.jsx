@@ -7,7 +7,7 @@ import {
   getProjectPhotosByProjectId,
 } from "../../services/projectService";
 
-export const Project = () => {
+export const Project = ({ currentUser }) => {
   const { projectId } = useParams();
   const navigate = useNavigate();
 
@@ -63,14 +63,16 @@ export const Project = () => {
           </figure>
         ))}
       </section>
-      <section>
-        <button>
-          <Link to={`/projects/${projectId}/edit`} key={project.id}>
-            Update Project
-          </Link>
-        </button>
-        <button onClick={handleDelete}>Delete Project</button>
-      </section>
+      {project.adminId === currentUser.id && (
+        <section>
+          <button>
+            <Link to={`/projects/${projectId}/edit`} key={project.id}>
+              Update Project
+            </Link>
+          </button>
+          <button onClick={handleDelete}>Delete Project</button>
+        </section>
+      )}
     </>
   );
 };

@@ -145,154 +145,176 @@
       "name": "Yuille Wedding",
       "date": "2026-01-27",
       "userId": 7,
-      "phaseId": 1
+      "phaseId": 4,
+      "adminId": 1
     },
     {
       "id": 2,
       "name": "Epine Baby Shower",
       "date": "2025-03-08",
       "userId": 3,
-      "phaseId": 2
+      "phaseId": 2,
+      "adminId": 1
     },
     {
       "id": 3,
       "name": "Epine Family",
       "date": "2025-11-22",
       "userId": 3,
-      "phaseId": 3
+      "phaseId": 3,
+      "adminId": 1
     },
     {
       "id": 4,
       "name": "Gamblin Party",
       "date": "2026-01-23",
       "userId": 4,
-      "phaseId": 4
+      "phaseId": 4,
+      "adminId": 1
     },
     {
       "id": 5,
       "name": "Aldcorn Event",
       "date": "2025-10-29",
       "userId": 5,
-      "phaseId": 1
+      "phaseId": 1,
+      "adminId": 1
     },
     {
       "id": 6,
       "name": "Fattorini Engagement",
       "date": "2025-08-05",
       "userId": 6,
-      "phaseId": 3
+      "phaseId": 3,
+      "adminId": 1
     },
     {
       "id": 7,
       "name": "Yuille Engagement",
       "date": "2025-11-06",
       "userId": 7,
-      "phaseId": 3
+      "phaseId": 3,
+      "adminId": 1
     },
     {
       "id": 8,
       "name": "Meadowcroft Party",
       "date": "2025-10-31",
       "userId": 8,
-      "phaseId": 4
+      "phaseId": 4,
+      "adminId": 1
     },
     {
       "id": 9,
       "name": "Chamley Senior Portraits",
       "date": "2025-02-22",
       "userId": 9,
-      "phaseId": 1
+      "phaseId": 1,
+      "adminId": 1
     },
     {
       "id": 10,
       "name": "Devo Baptism",
       "date": "2025-06-12",
       "userId": 10,
-      "phaseId": 2
+      "phaseId": 2,
+      "adminId": 1
     },
     {
       "id": 11,
       "name": "Forlong Wedding",
       "date": "2026-01-30",
       "userId": 11,
-      "phaseId": 3
+      "phaseId": 3,
+      "adminId": 2
     },
     {
       "id": 12,
       "name": "Wellsman Party",
       "date": "2026-02-05",
       "userId": 12,
-      "phaseId": 4
+      "phaseId": 4,
+      "adminId": 2
     },
     {
       "id": 13,
       "name": "Plaschke Picnic",
       "date": "2025-03-11",
       "userId": 13,
-      "phaseId": 1
+      "phaseId": 1,
+      "adminId": 2
     },
     {
       "id": 14,
       "name": "Swetland Event",
       "date": "2025-03-30",
       "userId": 14,
-      "phaseId": 2
+      "phaseId": 2,
+      "adminId": 2
     },
     {
       "id": 15,
       "name": "Peniman Party",
       "date": "2025-09-07",
       "userId": 15,
-      "phaseId": 3
+      "phaseId": 3,
+      "adminId": 2
     },
     {
       "id": 16,
       "name": "McGebenay Wedding",
       "date": "2025-04-05",
       "userId": 16,
-      "phaseId": 1
+      "phaseId": 1,
+      "adminId": 2
     },
     {
       "id": 17,
       "name": "Walaron Wedding",
       "date": "2025-09-02",
       "userId": 17,
-      "phaseId": 2
+      "phaseId": 2,
+      "adminId": 2
     },
     {
       "id": 18,
       "name": "Gamblin Cookout",
       "date": "2025-06-04",
       "userId": 4,
-      "phaseId": 3
+      "phaseId": 3,
+      "adminId": 2
     },
     {
       "id": 19,
       "name": "Twohig Family",
       "date": "2025-02-21",
       "userId": 19,
-      "phaseId": 3
+      "phaseId": 3,
+      "adminId": 2
     },
     {
       "id": 20,
       "name": "Exeter Engagement",
       "date": "2025-09-17",
       "userId": 20,
-      "phaseId": 3
+      "phaseId": 3,
+      "adminId": 2
     },
     {
       "id": 21,
       "name": "Meadowcroft Family",
       "date": "2026-01-18",
       "userId": 8,
-      "phaseId": 3
+      "phaseId": 3,
+      "adminId": 2
     },
     {
       "id": 22,
       "name": "Fattorini Divorce",
       "date": "2025-06-04",
       "userId": 6,
-      "phaseId": 2
+      "phaseId": 2,
+      "adminId": 2
     }
   ],
   "photos": [
