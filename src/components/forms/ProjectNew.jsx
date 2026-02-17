@@ -36,7 +36,13 @@ export const ProjectNew = () => {
         </fieldset>
         <fieldset>
           <div>Client Name:</div>
-          <select>
+          <select
+            onChange={(e) => {
+              const copy = { ...userChoices };
+              copy.userId = parseInt(e.target.value);
+              setUserChoices(copy);
+            }}
+          >
             <option key="0" value="0">
               - Select Client -
             </option>
@@ -49,7 +55,14 @@ export const ProjectNew = () => {
         </fieldset>
         <fieldset>
           <div>Session Date:</div>
-          <input type="date" />
+          <input
+            type="date"
+            onChange={(e) => {
+              const copy = { ...userChoices };
+              copy.date = e.target.value;
+              setUserChoices(copy);
+            }}
+          />
         </fieldset>
         <button>Save</button>
       </form>
