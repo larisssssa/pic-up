@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import {
+  deletePhoto,
   deleteProject,
-  getPhotosByProjectId,
   getProjectById,
+  getProjectPhotosByProjectId,
 } from "../../services/projectService";
 
 export const Project = () => {
@@ -27,14 +28,20 @@ export const Project = () => {
   }, [projectArray]);
 
   useEffect(() => {
-    getPhotosByProjectId(projectId).then((p) => {
+    getProjectPhotosByProjectId(projectId).then((p) => {
       setProjectPhotos(p);
     });
   }, [projectArray]);
 
   const handleDelete = () => {
     if (window.confirm("Are you sure you would like to delete this project?")) {
-      deleteProject(projectId).then(navigate(-1));
+      deleteProject(projectId);
+
+      projectPhotos.map((pp) => {
+        deletePhoto(pp.photo?.id);
+      });
+
+      navigate("/projects");
     } else {
       console.log("no");
     }

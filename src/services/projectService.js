@@ -16,7 +16,7 @@ export const getProjectById = (id) => {
   ).then((res) => res.json());
 };
 
-export const getPhotosByProjectId = (id) => {
+export const getProjectPhotosByProjectId = (id) => {
   return fetch(
     `http://localhost:8088/projectPhoto?projectId=${id}&_expand=photo`,
   ).then((res) => res.json());
@@ -48,6 +48,17 @@ export const createNewProject = (project) => {
   });
 };
 
-export const deleteProject = (id) => {
-  return fetch(`http://localhost:8088/projects/${id}`, { method: "DELETE" });
+export const deleteProject = (projectId) => {
+  return fetch(`http://localhost:8088/projects/${projectId}`, {
+    method: "DELETE",
+  });
+};
+
+export const deletePhoto = (photoId) => {
+  return fetch(`http://localhost:8088/photos/${photoId}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 };
