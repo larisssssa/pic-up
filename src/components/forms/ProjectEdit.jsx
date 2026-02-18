@@ -6,7 +6,7 @@ import {
   saveProjectUpdates,
 } from "../../services/projectService";
 
-export const ProjectEdit = ({ currentUser }) => {
+export const ProjectEdit = () => {
   const navigate = useNavigate();
   const { projectId } = useParams();
 
@@ -59,16 +59,13 @@ export const ProjectEdit = ({ currentUser }) => {
         <fieldset>
           Status:
           <select
-            value={userChoices.phase?.id}
+            value={userChoices.phaseId}
             onChange={(e) => {
               const copy = { ...userChoices };
               copy.phaseId = parseInt(e.target.value);
               setUserChoices(copy);
             }}
           >
-            <option key="0" value="0">
-              - select status -
-            </option>
             {phases.map((p) => (
               <option key={p.id} value={p.id}>
                 {p.name}

@@ -10,8 +10,8 @@ export const Authorized = ({ children }) => {
   if (localStorage.getItem("picup_user")) {
     return children
   }
-  // If the user is NOT logged in, redirect them to the login page using the Navigate component from react-router-dom
+  // If the user is NOT logged in, redirect them to the welcome page using the Navigate component from react-router-dom
   else {
-    return <Navigate to={`/login`} state={{ from: location }} replace />
+    return <Navigate to={`/welcome`} state={{ from: location }} replace />
   }
 }

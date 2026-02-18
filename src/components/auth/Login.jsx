@@ -58,9 +58,6 @@ export const Login = () => {
           </fieldset>
         </form>
       </section>
-      <section className="register-link">
-        <Link to="/register">Not a member yet?</Link>
-      </section>
     </main>
   );
 };
