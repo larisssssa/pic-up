@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-// import "./Login.css"
+import "./Login.css";
 import { getUserByEmail } from "../../services/userService";
 
 export const Login = () => {
@@ -37,7 +37,7 @@ export const Login = () => {
       <section>
         <form className="auth-form" onSubmit={handleLogin}>
           <h1 className="header">PicUp</h1>
-          <h2>Please sign in</h2>
+          <h2 className="caption">Please sign in</h2>
           <fieldset className="auth-fieldset">
             <div>
               <input

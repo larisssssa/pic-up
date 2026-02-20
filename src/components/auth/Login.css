@@ -1,12 +1,12 @@
 .auth-container {
-  border: 1px solid gray;
-  margin: 3rem 15rem;
+  border: 1px solid #261c1e;
+  margin: 3rem 30rem;
   padding: 2rem;
   border-radius: 1rem;
 }
 
-.header {
-  font-size: 2rem;
+.caption {
+  font-size: 1.2rem;
 }
 
 .auth-form {
@@ -25,4 +25,8 @@
 
 .auth-fieldset {
   margin: 0.25rem 0rem;
+}
+
+button {
+  font-size: 1em;
 }
