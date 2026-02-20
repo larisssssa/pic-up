@@ -1,0 +1,44 @@
+body {
+  background: #f2eeeb;
+  color: #261c1e;
+  font-family: "Work Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Stack Sans Notch", sans-serif;
+  /* font-family: "Bricolage Grotesque", sans-serif; */
+  font-size: 3em;
+}
+
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+button,
+a {
+  color: #261c1e;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.8em;
+  border-radius: 5px;
+  border: 1px solid #261c1e;
+  padding: 5px;
+  margin: 5px;
+  text-decoration: none;
+  background-color: #f7f5f3;
+}
+
+button:hover,
+a:hover {
+  background-color: #bf6e50;
+  color: #f2eeeb;
+}
+
+fieldset {
+  border: none;
+}
+input,
+select {
+  font-family: inherit;
+}
