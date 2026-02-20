@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { getProjects } from "../../services/projectService";
-import { Link, useNavigate } from "react-router-dom";
 
 export const ProjectList = () => {
   const [allProjects, setAllProjects] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     getProjects().then((data) => setAllProjects(data));
