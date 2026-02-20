@@ -65,11 +65,7 @@ export const Project = ({ currentUser }) => {
       </section>
       {project.adminId === currentUser.id && (
         <section>
-          <button>
-            <Link to={`/projects/${projectId}/edit`} key={project.id}>
-              Update Project
-            </Link>
-          </button>
+          <button onClick={navigate(`/projects/${projectId}/edit`)} />
           <button onClick={handleDelete}>Delete Project</button>
         </section>
       )}

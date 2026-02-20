@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { getProjects } from "../../services/projectService";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const ProjectList = () => {
   const [allProjects, setAllProjects] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     getProjects().then((data) => setAllProjects(data));
@@ -13,9 +14,7 @@ export const ProjectList = () => {
     <>
       <div>
         <div>
-          <button>
-            <Link to={`/projects/new`}>New Project</Link>
-          </button>
+          <a href={`/projects/new`}>New Project</a>
         </div>
         {allProjects.map((project) => {
           return (
@@ -26,11 +25,7 @@ export const ProjectList = () => {
               <div>Session Date: {project.date}</div>
               <div>Status: {project.phase?.name}</div>
               <div>
-                <button>
-                  <Link to={`/projects/${project.id}`} key={project.id}>
-                    Project Details
-                  </Link>
-                </button>
+                <a href={`/projects/${project.id}`}>Project Details</a>
               </div>
             </section>
           );
