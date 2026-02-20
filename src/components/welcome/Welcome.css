@@ -4,9 +4,10 @@
 }
 
 .welcome-main {
-  margin: auto;
-  padding: 20px;
+  margin: 3rem 30rem;
+  padding: 2rem;
   border: 1px solid #261c1e;
+  border-radius: 1rem;
   text-align: center;
 }
 
