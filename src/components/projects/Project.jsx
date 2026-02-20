@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import {
   deletePhoto,
   deleteProject,
@@ -65,11 +65,7 @@ export const Project = ({ currentUser }) => {
       </section>
       {project.adminId === currentUser.id && (
         <section>
-          <button>
-            <Link to={`/projects/${projectId}/edit`} key={project.id}>
-              Update Project
-            </Link>
-          </button>
+          <a href={`/projects/${projectId}/edit`}>Edit Project</a>
           <button onClick={handleDelete}>Delete Project</button>
         </section>
       )}
