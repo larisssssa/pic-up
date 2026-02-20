@@ -1,0 +1,10 @@
+.welcome-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.welcome-login {
+  font-size: 1.25rem;
+}
