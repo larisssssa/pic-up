@@ -6,6 +6,7 @@ import {
   getProjectById,
   getProjectPhotosByProjectId,
 } from "../../services/projectService";
+import "./Project.css"
 
 export const Project = ({ currentUser }) => {
   const { projectId } = useParams();
@@ -49,13 +50,13 @@ export const Project = ({ currentUser }) => {
 
   return (
     <>
-      <section>
-        <div>Project # {projectId}</div>
-        <div>Client: {project.user?.name}</div>
-        <div>Status: {project.phase?.name}</div>
-        <div>Session Date: {project.date}</div>
+      <section className="project-info">
+        <div><span>Project # {projectId}</span></div>
+        <div><span>Client: </span>{project.user?.name}</div>
+        <div><span>Status: </span>{project.phase?.name}</div>
+        <div><span>Session Date:</span> {project.date}</div>
       </section>
-      <section>
+      <section className="project-images">
         {projectPhotos.map((p) => (
           <figure key={p.id}>
             <img src={p.photo?.link} />
@@ -64,7 +65,7 @@ export const Project = ({ currentUser }) => {
         ))}
       </section>
       {project.adminId === currentUser.id && (
-        <section>
+        <section className="project-actions">
           <a href={`/projects/${projectId}/edit`}>Edit Project</a>
           <button onClick={handleDelete}>Delete Project</button>
         </section>

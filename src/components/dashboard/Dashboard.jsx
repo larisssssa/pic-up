@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getInProgressProjects } from "../../services/projectService";
+import "./Dashboard.css"
 
 export const Dashboard = ({ currentUser }) => {
   const [dashSessions, setDashSessions] = useState([]);
@@ -20,14 +21,15 @@ export const Dashboard = ({ currentUser }) => {
     <>
       <div>
         <div>
-          <h2>Sessions in Progress</h2>
+          <h2>My Sessions</h2>
+          <div className="sessions">
           {filteredSessions.map((session) => (
-            <section key={session.id}>
-              <div>---</div>
+            <section className="session-item" key={session.id}>
               <header>{session.name}</header>
               <div>{session.date}</div>
             </section>
           ))}
+          </div>
         </div>
       </div>
     </>

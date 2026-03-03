@@ -1,0 +1,17 @@
+.project-info {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 25%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.project-images {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+}
+
+span {
+  font-weight: 500;
+}

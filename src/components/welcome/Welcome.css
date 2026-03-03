@@ -1,0 +1,16 @@
+#root {
+  height: 100%;
+  display: grid;
+}
+
+.welcome-main {
+  margin: 3rem 20rem;
+  padding: 2rem;
+  border: 1px solid #261c1e;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.welcome-login {
+  font-size: 1.25rem;
+}

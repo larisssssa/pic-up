@@ -1,18 +1,22 @@
-.auth-container {
-  border: 1px solid gray;
-  margin: 3rem 15rem;
+/* .auth-container {
+  border: 1px solid #261c1e;
+  margin: 3rem 20rem;
   padding: 2rem;
   border-radius: 1rem;
-}
+} */
 
-.header {
-  font-size: 2rem;
+.caption {
+  font-size: 1.2rem;
 }
 
 .auth-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid #261c1e;
+  margin: 3rem 20rem;
+  padding: 2rem;
+  border-radius: 1rem;
 }
 
 .auth-form-input {
@@ -25,4 +29,8 @@
 
 .auth-fieldset {
   margin: 0.25rem 0rem;
+}
+
+button {
+  font-size: 1em;
 }

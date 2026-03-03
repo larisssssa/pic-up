@@ -1,0 +1,18 @@
+.nav {
+  border: 1px solid black;
+}
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 10px;
+  width: auto;
+}
+
+li {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.nav-logout {
+  margin-left: auto;
+}

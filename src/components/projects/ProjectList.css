@@ -1,0 +1,12 @@
+.list-actions {
+  padding: 10px 0px;
+  margin: 10px 0;
+}
+
+.project-actions {
+  padding: 10px 0;
+}
+
+span {
+  font-weight: 500;
+}
