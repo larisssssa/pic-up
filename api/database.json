@@ -141,14 +141,6 @@
   ],
   "projects": [
     {
-      "id": 1,
-      "name": "Yuille Wedding",
-      "date": "2026-01-27",
-      "userId": 7,
-      "phaseId": 4,
-      "adminId": 1
-    },
-    {
       "id": 2,
       "name": "Epine Baby Shower",
       "date": "2025-03-08",
@@ -315,6 +307,14 @@
       "userId": 6,
       "phaseId": 2,
       "adminId": 2
+    },
+    {
+      "id": 23,
+      "name": "NSS Graduation",
+      "date": "2026-05-15",
+      "userId": 3,
+      "phaseId": 2,
+      "adminId": 1
     }
   ],
   "photos": [
@@ -379,11 +379,6 @@
       "link": "http://dummyimage.com/165x134.png/5fa2dd/ffffff"
     },
     {
-      "id": 13,
-      "fileName": "ConsequatVarius.png",
-      "link": "http://dummyimage.com/244x177.png/dddddd/000000"
-    },
-    {
       "id": 14,
       "fileName": "LacusAtTurpis.png",
       "link": "http://dummyimage.com/213x247.png/cc0000/ffffff"
@@ -407,11 +402,6 @@
       "id": 18,
       "fileName": "TristiqueEstEt.png",
       "link": "http://dummyimage.com/162x274.png/5fa2dd/ffffff"
-    },
-    {
-      "id": 19,
-      "fileName": "Vulputate.png",
-      "link": "http://dummyimage.com/164x208.png/dddddd/000000"
     },
     {
       "id": 20,
@@ -631,11 +621,6 @@
       "photoId": 12
     },
     {
-      "id": 13,
-      "projectId": 1,
-      "photoId": 13
-    },
-    {
       "id": 14,
       "projectId": 20,
       "photoId": 14
@@ -659,11 +644,6 @@
       "id": 18,
       "projectId": 6,
       "photoId": 18
-    },
-    {
-      "id": 19,
-      "projectId": 1,
-      "photoId": 19
     },
     {
       "id": 20,

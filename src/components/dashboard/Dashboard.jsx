@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getInProgressProjects } from "../../services/projectService";
-import "./Dashboard.css"
+import "./Dashboard.css";
 
 export const Dashboard = ({ currentUser }) => {
   const [dashSessions, setDashSessions] = useState([]);
@@ -23,12 +23,12 @@ export const Dashboard = ({ currentUser }) => {
         <div>
           <h2>My Sessions</h2>
           <div className="sessions">
-          {filteredSessions.map((session) => (
-            <section className="session-item" key={session.id}>
-              <header>{session.name}</header>
-              <div>{session.date}</div>
-            </section>
-          ))}
+            {filteredSessions.map((session) => (
+              <section className="session-item" key={session.id}>
+                <header>{session.name}</header>
+                <div>{session.date}</div>
+              </section>
+            ))}
           </div>
         </div>
       </div>
