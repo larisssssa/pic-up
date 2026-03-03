@@ -21,7 +21,7 @@ export const Dashboard = ({ currentUser }) => {
     <>
       <div>
         <div>
-          <h2>Sessions in Progress</h2>
+          <h2>My Sessions</h2>
           <div className="sessions">
           {filteredSessions.map((session) => (
             <section className="session-item" key={session.id}>
