@@ -5,6 +5,7 @@ import {
   getPhases,
   saveProjectUpdates,
 } from "../../services/projectService";
+import "./Form.css"
 
 export const ProjectEdit = () => {
   const navigate = useNavigate();
@@ -55,9 +56,9 @@ export const ProjectEdit = () => {
     <>
       <form>
         <h2>Update Project</h2>
-        <fieldset>Client Name: {project.user?.name}</fieldset>
+        <fieldset><span>Client Name: </span>{project.user?.name}</fieldset>
         <fieldset>
-          Status:
+          <span>Status: </span>
           <select
             value={userChoices.phaseId}
             onChange={(e) => {
@@ -73,7 +74,7 @@ export const ProjectEdit = () => {
             ))}
           </select>
         </fieldset>
-        <fieldset>Date: {project.date}</fieldset>
+        <fieldset><span>Date: </span>{project.date}</fieldset>
         <button onClick={(e) => handleSave(e)}>Save</button>
       </form>
     </>
